@@ -3,10 +3,8 @@ const card = document.querySelector(".card");
 const weatherDetails = document.querySelector(".details");
 const daytime = document.querySelector(".daytime");
 const icon = document.querySelector(".icon img");
-const updateUI = object => {
-  const cityDetails = object.cityKey;
-  const weather = object.currentWeather;
 
+const createTemplate = (cityDetails, weather) => {
   console.log(cityDetails, weather);
 
   // remove d-none class if it's present
@@ -17,13 +15,29 @@ const updateUI = object => {
   // update details div template
 
   weatherDetails.innerHTML = `
-  <h5 class="my-3">${cityDetails.EnglishName}</h5>
-  <div class="my-3">${weather.WeatherText}</div>
-  <div class="display-4 my-4">
-    <span>${Math.floor(weather.Temperature.Metric.Value)}</span>
-    <span>&deg;C</span>
-  </div>
-  `;
+    <h5 class="my-3">${cityDetails.EnglishName}</h5>
+    <div class="my-3">${weather.WeatherText}</div>
+    <div class="display-4 my-4">
+      <span>${Math.floor(weather.Temperature.Metric.Value)}</span>
+      <span>&deg;C</span>
+    </div>
+    `;
+
+  // add daytime img
+  if (weather.IsDayTime === true) {
+    daytime.setAttribute("src", "img/day.svg");
+  } else if (weather.IsDayTime === false)
+    daytime.setAttribute("src", "img/night.svg");
+
+  // add icon
+  icon.setAttribute("src", `img/icons/${weather.WeatherIcon}.svg`);
+};
+
+const updateUI = object => {
+  const cityDetails = object.cityKey;
+  const weather = object.currentWeather;
+
+  createTemplate(cityDetails, weather);
 };
 
 const updateCity = async city => {
