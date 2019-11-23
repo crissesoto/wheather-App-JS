@@ -24,7 +24,7 @@ const getCity = async cityname => {
   //console.log(data[0].Key);
 };
 
-getCity("london")
+getCity("bruges")
   .then(cityKey => {
     return getCurrentWeather(cityKey);
   })
