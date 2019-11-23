@@ -1,7 +1,8 @@
 const form = document.querySelector("form");
 const card = document.querySelector(".card");
 const weatherDetails = document.querySelector(".details");
-
+const daytime = document.querySelector(".daytime");
+const icon = document.querySelector(".icon img");
 const updateUI = object => {
   const cityDetails = object.cityKey;
   const weather = object.currentWeather;
