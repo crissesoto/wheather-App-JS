@@ -61,4 +61,13 @@ form.addEventListener("submit", e => {
   updateCity(searchedCity)
     .then(object => updateUI(object))
     .catch(error => console.log("rejected:", error));
+
+  // localStorage
+  localStorage.setItem("city", searchedCity);
 });
+
+if (localStorage.getItem("city")) {
+  updateCity(localStorage.getItem("city"))
+    .then(data => updateUI(data))
+    .catch(error => console.log("rejected:", error));
+}
