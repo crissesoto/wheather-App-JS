@@ -24,10 +24,9 @@ const createTemplate = (cityDetails, weather) => {
     `;
 
   // add daytime img
-  if (weather.IsDayTime === true) {
-    daytime.setAttribute("src", "img/day.svg");
-  } else if (weather.IsDayTime === false)
-    daytime.setAttribute("src", "img/night.svg");
+  weather.IsDayTime
+    ? daytime.setAttribute("src", "img/day.svg")
+    : daytime.setAttribute("src", "img/night.svg");
 
   // add icon
   icon.setAttribute("src", `img/icons/${weather.WeatherIcon}.svg`);
