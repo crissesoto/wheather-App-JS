@@ -5,10 +5,10 @@ Wheather app with AccuWeather API and Javascript Assyn & Await to Fetch data.
 
 ## Built With
 
-* [HTML]
-* [CSS]
-* [Javascritp]
-* [AccWeather API]
+* HTML
+* CSS
+* Javascritp
+* AccWeather API
 
 ## Contributing
 
