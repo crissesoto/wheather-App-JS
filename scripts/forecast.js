@@ -1,3 +1,4 @@
+// https://developer.accuweather.com/
 const key = "nrOGV86jnhxLczGGEhNruxAGVr6rcdGA";
 
 const getCurrentWeather = async cityKey => {
