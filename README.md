@@ -2,6 +2,10 @@
 
 Wheather app with AccuWeather API and Javascript Assyn & Await to Fetch data.
 
+## Screenshot
+
+![wheater-app-screenshot](https://user-images.githubusercontent.com/46997688/71676242-0586b700-2d80-11ea-9e07-d2f51fefb1fc.png)
+
 
 ## Built With
 
